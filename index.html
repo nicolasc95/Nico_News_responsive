@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Nico News|Home Page</title>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/CSS" href="./CSS/header.css">
   </head>
   <body>
     <header>
@@ -16,32 +17,29 @@
         <!--Hamburguer icon in mobile/nav bar in tabler or desktop-->
         <nav>
           <i class="material-icons">menu</i>
-          <ul class="nav_menu">
-            <li>
-              <p>Home</p>
-              <p>Last News</p>
-              <p>Argentina</p>
-              <p>Sports</p>
-              <p>Opinions</p>
-              <p>About</p>
-            </li>
-          </ul>
+          <div class="nav_menu">
+            <ul>
+                <li>Home</li>
+                <li>Last News</li>
+                <li>Argentina</li>
+                <li>Sports</li>
+                <li>Opinions</li>
+                <li>About</li>
+                <li><a href="">Suscribe now</a></li>
+            </ul>
+          </div>
         </nav>
-        <!--Today info-->
-        <div class="Today">
-          <ul>
-              <li>Weather</li>
-              <li>Date</li>
-              <li>Dollar</li>
-              <li>Suscribe now</li>
-          </ul>
-        </div>
       </div>
+        <!--Today info-->
+        <ul class="today">
+          <li>Weather</li>
+          <li>Date</li>
+        </ul>
     </header>
     <!--Latest New-->
     <section>
       <div class="Primary">
-        <h1>Gov. J.B. Pritzker blames President Trump and his allies for coronavirus spike in Illinois</h1>
+        <h2>Gov. J.B. Pritzker blames President Trump and his allies for coronavirus spike in Illinois</h2>
         <img src="./Images/Gov. J.B. Pritzker.jpg" alt="Gov. J.B. Pritzker blames President Trump and his allies
         for coronavirus spike in Illinois" />
         <p>
@@ -79,7 +77,8 @@
         </div>
         <div class="box">
           <h2>At Front Lines of a Brutal War: Death and Despair in Nagorno-Karabakh</h2>
-          <img src="./Images/At front Lines of a Brutal War.jpg" alt="At Front Lines of a Brutal War: Death and Despair in Nagorno-Karabakh" />
+          <img src="./Images/At front Lines of a Brutal War.jpg" 
+            alt="At Front Lines of a Brutal War: Death and Despair in Nagorno-Karabakh" />
           <p>
             Times journalists find civilians huddling in basements as a three-week-old 
             conflict over the disputed Caucasus territory hints of a long and punishing fight.
@@ -92,17 +91,17 @@
     <aside>
       <div class="publicity">
         <div class="box">
-          <h2>You can be your own boss!</h2>
+          <h3>You can be your own boss!</h3>
           <img src="./Images/Be your own boss.jpg" alt="You can be your own boss!" />
         </div>
         <div class="box">
-          <h2>Trading Course </h2>
+          <h3>Trading Course </h3>
           <img src="./Images/Trading.jpg" alt="Trading Course" />
         </div>
       </div>
     </aside>
     <footer>
-      <div class="Container">
+      <div class="container">
         <div class="branding">
           <h1>Nico News</h1>
         </div>

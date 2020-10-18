@@ -1,0 +1,32 @@
+@media (max-width:768px){
+nav .nav_menu{
+    display:none;
+  }
+}
+img{
+  max-width: 100%;
+}
+.container{
+  display: flex;
+  justify-content: space-around;
+  max-width: auto;
+  background-color: #95a1ae;
+}
+.container .branding{
+
+
+}
+.container .material-icons{
+
+}
+.today{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  background-color: #95a1ae;
+  
+}
+footer .container{
+  flex-direction: column;
+  align-items: center;
+}
