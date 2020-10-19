@@ -18,6 +18,9 @@
   aside{
     background-color: #c8cfd6;
   }
+  .publicity{
+    border-style:none;
+  }
 }
 @media (max-width:768px){
   .box{
@@ -92,7 +95,11 @@ aside{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content:space-around;
+  border-top-style: solid;
+  border-width: 2px;
+  border-color: #f6ccb2;
 }
 .publicity .box{
+  width: 35%;
   padding: 25px 0px;
 }
