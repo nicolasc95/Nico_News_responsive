@@ -1,0 +1,73 @@
+@font-face{
+  font-family: berkshireswash-regular;
+  src: url(../Fonts/BerkshireSwash-Regular.ttf);
+}
+@font-face{
+  font-family: inconsolata;
+  src: url(../Fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+article{
+  max-width: 900px;
+}
+aside{
+  max-width: 350px;
+}
+img{
+  min-width: 100%;
+}
+cite{
+  padding:0px 10px;
+  color: #95a1ae;
+  font-family:inconsolata;
+  font-size: 13px;
+}
+cite strong{
+  text-transform: uppercase;
+}
+h2{
+  padding:10px 10px;
+  font-size:24px;
+  font-family: berkshirewash-regular;
+}
+p{
+  padding:0px 10px 10px 10px;
+  font-family:inconsolata;
+  font-size:16px;
+}
+.main_container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1400px;
+}
+.primary{
+  max-width: 900px;
+  line-height:1.2;
+  background-color: #efded6;
+  font-size:18px;
+}
+.primary h2{
+  font-size:28px;
+}
+.secondary{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width:900px;
+}
+.box{
+  max-width: 420px;
+  padding: 15px 15px;
+}
+.publicity{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: center;
+  
+}
+.publicity .box{
+  max-width: 360px;
+  padding: 19px;
+}
