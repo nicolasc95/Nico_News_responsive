@@ -6,11 +6,23 @@
   font-family: inconsolata;
   src: url(../Fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
-article{
-  max-width: 900px;
+@media (max-width:1024px){
+  article{
+    min-width: 100%;
+  }
 }
-aside{
-  max-width: 350px;
+@media (min-width:1024px){
+  .publicity .box{
+    min-width: 75%;
+  }
+  aside{
+    background-color: #c8cfd6;
+  }
+}
+@media (max-width:768px){
+  .box{
+    min-width: 75%;
+  }
 }
 img{
   min-width: 100%;
@@ -29,6 +41,11 @@ h2{
   font-size:24px;
   font-family: berkshirewash-regular;
 }
+h3{ 
+  font-size:20px;
+  font-family: berkshirewash-regular;
+  
+}
 p{
   padding:0px 10px 10px 10px;
   font-family:inconsolata;
@@ -38,10 +55,18 @@ p{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1400px;
+  max-width: 100%;
+  justify-content:flex-start;
 }
+article{
+  flex:2 0;
+}
+aside{
+  flex:1 1;
+}
+
 .primary{
-  max-width: 900px;
+  max-width: 100%;
   line-height:1.2;
   background-color: #efded6;
   font-size:18px;
@@ -53,21 +78,20 @@ p{
   display:flex;
   flex-direction:row;
   flex-wrap: wrap;
+  max-width: 100%;
   justify-content: center;
-  max-width:900px;
+  padding:15px 0px;
 }
 .box{
-  max-width: 420px;
-  padding: 15px 15px;
+  width: 44.5%;
+  padding:0px 15px;
 }
 .publicity{
   display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content: center;
-  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
 }
 .publicity .box{
-  max-width: 360px;
-  padding: 19px;
+  padding: 25px 0px;
 }
