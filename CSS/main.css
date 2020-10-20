@@ -18,13 +18,13 @@
   aside{
     background-color: #c8cfd6;
   }
-  .publicity{
-    border-style:none;
-  }
 }
 @media (max-width:768px){
   .box{
     min-width: 75%;
+  }
+  .publicity .box{
+    min-width: 50%;
   }
 }
 img{
@@ -68,7 +68,6 @@ article{
 aside{
   flex:1 1;
 }
-
 .primary{
   max-width: 100%;
   line-height:1.2;
@@ -84,7 +83,7 @@ aside{
   flex-wrap: wrap;
   max-width: 100%;
   justify-content: center;
-  padding:15px 0px;
+  padding: 3% 0px;
 }
 .box{
   width: 44.5%;
@@ -101,5 +100,6 @@ aside{
 }
 .publicity .box{
   width: 35%;
-  padding: 25px 0px;
+  margin: 1%;
+  padding:5%
 }
