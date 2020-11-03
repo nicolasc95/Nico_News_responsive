@@ -2,19 +2,23 @@
   font-family: purple-purse-regular;
   src: url(../Fonts/PurplePurse-Regular.ttf);
 }
+
 @font-face{
   font-family: inconsolata;
   src: url(../Fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
+
 @font-face{
   font-family: berkshireswash-regular;
   src: url(../Fonts/BerkshireSwash-Regular.ttf);
 }
+
 @media (max-width:768px){
   nav .nav_menu{
     display:none;
   }
 }
+
 @media (min-width:768px){
   .material-icons{
     display:none;
@@ -25,14 +29,17 @@
   flex-wrap: wrap;
   justify-content:space-around;
   padding: 10px;
+  }
 }
-}
+
 body{
   min-width: 90%;
 }
+
 img{
   max-width: 100%;
 }
+
 a{
   line-height: 1.5;
   color: #f6ccb2;
@@ -40,12 +47,15 @@ a{
   font-size: 16px;
   text-decoration: none;
 }
+
 a:hover{
   text-decoration:underline;
 }
+
 a:visited{
   text-decoration:underline;
 }
+
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +64,7 @@ a:visited{
   min-height: 70px;
   background-color: #95a1ae;
 }
+
 .container .branding{
   padding: 25px 0px;
   color: black;
@@ -61,10 +72,12 @@ a:visited{
   font-size:50px;
   text-shadow: 2px 2px 4px #d37c66;
 }
+
 .nav_menu a{
   font-family: inconsolata;
   font-size: 20px;
 }
+
 .nav_menu{
   display: flex;
   flex-wrap: wrap;
@@ -74,18 +87,22 @@ a:visited{
   border-width: 2px;
   border-color: #f6ccb2;
 }
+
 .nav_menu li{
   display:inline;
   margin: 0px 10px;
   padding: 8px 20px;
   background-color: #d37c66; 
 }
+
 .top_nav{
   margin: 5px 0px;
 }
+
 .bottom_nav{
   margin: 5px 0px;
 }
+
 .today{
   display:flex;
   flex-direction:row;
@@ -100,12 +117,13 @@ a:visited{
   font-family: inconsolata;
   font-size: 20px;
   text-decoration: none;
-  
 }
+
 footer .container{
   flex-direction: column;
   align-items: center;
 }
+
 .container cite{
   line-height: 1.5;
   color:  #f6ccb2;
@@ -113,9 +131,11 @@ footer .container{
   font-family: inconsolata;
   font-size:16px
 }
+
 .footer_list{
   width: 80%;
 }
+
 .footer_list ul{
   width: 100%;
   display:flex;
