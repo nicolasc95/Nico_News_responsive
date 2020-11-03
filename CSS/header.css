@@ -23,13 +23,6 @@
   .material-icons{
     display:none;
   }
-  .footer_list .list_elements{
-  display:flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content:space-around;
-  padding: 10px;
-  }
 }
 
 body{

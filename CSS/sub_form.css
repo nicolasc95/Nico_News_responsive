@@ -1,0 +1,71 @@
+@font-face{
+  font-family: berkshireswash-regular;
+  src: url(../Fonts/BerkshireSwash-Regular.ttf);
+}
+
+@font-face{
+  font-family: inconsolata;
+  src: url(../Fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+.form1{
+  width: 100%;
+  background-color: #c8cfd6;
+}
+
+.form_header {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.form_header h2{
+  color: #f6ccb2;
+  padding:10px 10px;
+  font-size:28px;
+  font-family: berkshirewash-regular;
+  text-shadow: 2px 2px 4px black;
+}
+
+.form_header h3{ 
+  padding: 4px;
+  font-size:20px;
+  font-family: berkshirewash-regular;
+}
+
+.form_columns {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-items: center ;
+}
+
+.form1 .form_columns .column_1{
+  width: 90%;
+}
+
+@media (min-width:768px){
+  .form1 .form_columns .column_1 {
+    width: 45.5%;
+  }
+}
+
+.form_element {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin:20px;
+  font-family: berkshireswash-regular;
+  font-size: 18px;
+}
+.form_element label{
+  margin-bottom: 10px;
+}
+
+.form_element input{
+  width: 80%;
+  padding: 5px 15px;
+  border: thin solid;
+  border-radius: 300px;
+}
