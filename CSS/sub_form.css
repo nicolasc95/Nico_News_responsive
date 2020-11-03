@@ -64,6 +64,22 @@
   border-radius: 300px;
 }
 
+.send_button{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+.send_button input{
+  padding: 8px 20px;
+  background-color:#f6ccb2; 
+  border: thin solid;
+  border-radius: 300px;
+  font-family: inconsolata;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
 @media (min-width:768px){
   .form1 .form_columns .column_1 {
     width: 45.5%;
