@@ -1,0 +1,39 @@
+footer .container{
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70px;
+  background-color: #95a1ae;
+}
+
+.container .branding{
+  padding: 25px 0px;
+  color: black;
+  font-family: purple-purse-regular;
+  font-size:50px;
+  text-shadow: 2px 2px 4px #d37c66;
+}
+.container cite{
+  line-height: 1.5;
+  color:  #f6ccb2;
+  text-shadow: 2px 2px 4px black;
+  font-family: inconsolata;
+  font-size:16px
+}
+
+.footer_list{
+  width: 80%;
+}
+
+.footer_list ul{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}

@@ -118,27 +118,3 @@ a:visited{
   font-size: 20px;
   text-decoration: none;
 }
-
-footer .container{
-  flex-direction: column;
-  align-items: center;
-}
-
-.container cite{
-  line-height: 1.5;
-  color:  #f6ccb2;
-  text-shadow: 2px 2px 4px black;
-  font-family: inconsolata;
-  font-size:16px
-}
-
-.footer_list{
-  width: 80%;
-}
-
-.footer_list ul{
-  width: 100%;
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-}
