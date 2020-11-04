@@ -10,7 +10,7 @@ window.onload = function(){
   nameInput.addEventListener("blur", nameBlur);
 
   function nameBlur(){
-    if ((!valName(this.value) || (this.value.length <= 6)) && this.value != '') { 
+    if ((!valName(this.value) || (this.value.length <= 5)) && this.value != '') { 
       var errorMessage = document.querySelector('#name_input').nextElementSibling;
       errorMessage.style.visibility =  "visible" ;
       errorMessage.style.color = "red";
@@ -72,7 +72,7 @@ var errorMessage = document.querySelector('#pass_input').nextElementSibling;
 passInput.addEventListener("blur", passBlur);
 
 function passBlur(){
-  if ((!valPass(this.value) || (this.value.length <= 8)) && this.value != '') { 
+  if ((!valPass(this.value) || (this.value.length <= 7)) && this.value != '') { 
     var errorMessage = document.querySelector('#pass_input').nextElementSibling;
     errorMessage.style.visibility =  "visible" ;
     errorMessage.style.color = "red";
@@ -147,6 +147,37 @@ ageInput.addEventListener("focus", ageHidden);
 
 function ageHidden(){
   var errorMessage = document.querySelector('#age_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
+/******************************** PHONE NUMBER ********************************/
+var phoneInput = document.querySelector('#phone_input');
+// Phone ******* validation hidden at first
+var errorMessage = document.querySelector('#phone_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Phone ******* Blur event 
+phoneInput.addEventListener("blur", phoneBlur);
+
+function phoneBlur(){
+  if ((!valPhone(this.value) || (this.value.length <=6)) && this.value != '') { 
+    var errorMessage = document.querySelector('#phone_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Phone: " + phoneInput.value);
+  }
+}
+function valPhone(str){
+  let re =/^[0-9]+$/;  // '-' allowed, CHANGE IT //
+  if(re.test(str)){
+    return true;
+  }
+}
+// Phone ******* Focus event
+phoneInput.addEventListener("focus", phoneHidden);
+
+function phoneHidden(){
+  var errorMessage = document.querySelector('#phone_input').nextElementSibling;
   errorMessage.style.visibility =  "hidden";
 }
 }
