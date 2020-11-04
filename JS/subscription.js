@@ -181,7 +181,7 @@ function phoneHidden(){
   errorMessage.style.visibility =  "hidden";
 }
 
-/******************************** Address ********************************/
+/******************************** ADDRESS ********************************/
 var addressInput = document.querySelector('#address_input');
 // Address ******* validation hidden at first
 var errorMessage = document.querySelector('#address_input').nextElementSibling;
@@ -209,6 +209,37 @@ addressInput.addEventListener("focus", addressHidden);
 
 function addressHidden(){
   var errorMessage = document.querySelector('#address_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
+/******************************** CITY ********************************/
+var cityInput = document.querySelector('#city_input');
+// City ******* validation hidden at first
+var errorMessage = document.querySelector('#city_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// City ******* Blur event 
+cityInput.addEventListener("blur", cityBlur);
+
+function cityBlur(){
+  if ((!valCity(this.value) || this.value.length < 3 ) && this.value != '') { 
+    var errorMessage = document.querySelector('#city_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("City: " + cityInput.value);
+  }
+}
+function valCity(str){    
+  let re = /^[a-zA-Z\s]+$/
+  if(re.test(str)){
+    return true;
+  }
+}
+// City ******* Focus event
+cityInput.addEventListener("focus", cityHidden);
+
+function cityHidden(){
+  var errorMessage = document.querySelector('#city_input').nextElementSibling;
   errorMessage.style.visibility =  "hidden";
 }
 
