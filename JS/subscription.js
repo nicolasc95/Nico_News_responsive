@@ -243,4 +243,65 @@ function cityHidden(){
   errorMessage.style.visibility =  "hidden";
 }
 
+/******************************** ZIP CODE ********************************/
+var zipInput = document.querySelector('#zip_input');
+// Zip ******* validation hidden at first
+var errorMessage = document.querySelector('#zip_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Zip ******* Blur event 
+zipInput.addEventListener("blur", zipBlur);
+
+function zipBlur(){
+  if ((!valZip(this.value) || this.value.length < 3 ) && this.value != '') { 
+    var errorMessage = document.querySelector('#zip_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Zip Code: " + zipInput.value);
+  }
+}
+function valZip(str){    
+  let re = /^[0-9]+$/
+  if(re.test(str)){
+    return true;
+  }
+}
+// Zip ******* Focus event
+zipInput.addEventListener("focus", zipHidden);
+
+function zipHidden(){
+  var errorMessage = document.querySelector('#zip_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
+/******************************** I.D.NUMBER ********************************/
+var idInput = document.querySelector('#id_input');
+// idNumber ******* validation hidden at first
+var errorMessage = document.querySelector('#id_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// idNumber ******* Blur event 
+idInput.addEventListener("blur", idBlur);
+
+function idBlur(){
+  if (!valId(this.value) && this.value != '') {
+    var errorMessage = document.querySelector('#id_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("ID Number: " + zipInput.value);
+  }
+}
+function valId(str){    
+  let re = /^[0-9]{7,8}?$/
+  if(re.test(str)){
+    return true;
+  }
+}
+// idNumber ******* Focus event
+idInput.addEventListener("focus", idHidden);
+
+function idHidden(){
+  var errorMessage = document.querySelector('#id_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
 }
