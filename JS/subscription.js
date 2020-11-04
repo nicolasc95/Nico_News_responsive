@@ -62,4 +62,61 @@ window.onload = function(){
     var errorMessage = document.querySelector('#email_input').nextElementSibling;
     errorMessage.style.visibility =  "hidden";
   }
+
+/******************************** PASSWORD ********************************/
+var passInput = document.querySelector('#pass_input');
+// Password ******* validation hidden at first
+var errorMessage = document.querySelector('#pass_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Password ******* Blur event 
+passInput.addEventListener("blur", passBlur);
+
+function passBlur(){
+  if ((!valPass(this.value) || (this.value.length <= 8)) && this.value != '') { 
+    var errorMessage = document.querySelector('#pass_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Password: " + passInput.value);
+  }
+}
+function valPass(str){
+  let re =/^(?:[0-9]+[a-z]|[a-z]+[0-9])[a-z0-9]*$/;
+  if(re.test(str)){
+    return true;
+  }
+}
+// Password ******* Focus event
+passInput.addEventListener("focus", passHidden);
+
+function passHidden(){
+  var errorMessage = document.querySelector('#pass_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
+/******************************** REPEAT-PASSWORD ********************************/
+var rePassInput = document.querySelector('#rep_pass_input');
+// Password ******* validation hidden at first
+var errorMessage = document.querySelector('#rep_pass_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Password ******* Blur event 
+rePassInput.addEventListener("blur", rep_pass_Blur);
+
+function rep_pass_Blur(){
+  if ((this.value != passInput.value) && this.value != '') { 
+    var errorMessage = document.querySelector('#rep_pass_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Repeat-Password: OK ");
+  }
+}
+// Password ******* Focus event
+rePassInput.addEventListener("focus", rePassHidden);
+
+function rePassHidden(){
+  var errorMessage = document.querySelector('#rep_pass_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
 }
