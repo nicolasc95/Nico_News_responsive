@@ -1,5 +1,6 @@
 window.onload = function(){
 
+  var butMsg ;
   /******************************** NAME ********************************/
   var nameInput = document.querySelector('#name_input');
   // Name ******* validation hidden at first
@@ -287,8 +288,11 @@ function idBlur(){
     var errorMessage = document.querySelector('#id_input').nextElementSibling;
     errorMessage.style.visibility =  "visible" ;
     errorMessage.style.color = "red";
+    return ["I.D. Error"]
   }else {
     console.log("ID Number: " + zipInput.value);
+    return ["I.D. Number" + idInput.value + '\n']
+
   }
 }
 function valId(str){    
@@ -304,4 +308,12 @@ function idHidden(){
   var errorMessage = document.querySelector('#id_input').nextElementSibling;
   errorMessage.style.visibility =  "hidden";
 }
+//Name hello
+var nameInput =  document.getElementById('name_input');
+nameInput.addEventListener('keyup',helloName);
+
+function helloName(){
+    document.getElementById('hello').innerText = 'Hello ' + event.target.value + '!';
 }
+}
+
