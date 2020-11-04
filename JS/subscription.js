@@ -180,4 +180,36 @@ function phoneHidden(){
   var errorMessage = document.querySelector('#phone_input').nextElementSibling;
   errorMessage.style.visibility =  "hidden";
 }
+
+/******************************** Address ********************************/
+var addressInput = document.querySelector('#address_input');
+// Address ******* validation hidden at first
+var errorMessage = document.querySelector('#address_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Address ******* Blur event 
+addressInput.addEventListener("blur", addressBlur);
+
+function addressBlur(){
+  if (!valAddress(this.value) && this.value != '') { 
+    var errorMessage = document.querySelector('#address_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Address: " + addressInput.value);
+  }
+}
+function valAddress(str){    
+  let re = /^([a-z0-9]{2,}[\s]+)+([0-9]+)$/
+  if(re.test(str)){
+    return true;
+  }
+}
+// Address ******* Focus event
+addressInput.addEventListener("focus", addressHidden);
+
+function addressHidden(){
+  var errorMessage = document.querySelector('#address_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
+
 }
