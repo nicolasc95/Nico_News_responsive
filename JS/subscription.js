@@ -96,13 +96,13 @@ function passHidden(){
 
 /******************************** REPEAT-PASSWORD ********************************/
 var rePassInput = document.querySelector('#rep_pass_input');
-// Password ******* validation hidden at first
+// RepeatPassword ******* validation hidden at first
 var errorMessage = document.querySelector('#rep_pass_input').nextElementSibling;
   errorMessage.style.visibility =  "hidden";
-// Password ******* Blur event 
-rePassInput.addEventListener("blur", rep_pass_Blur);
+// RepeatPassword ******* Blur event 
+rePassInput.addEventListener("blur", repPassBlur);
 
-function rep_pass_Blur(){
+function repPassBlur(){
   if ((this.value != passInput.value) && this.value != '') { 
     var errorMessage = document.querySelector('#rep_pass_input').nextElementSibling;
     errorMessage.style.visibility =  "visible" ;
@@ -111,7 +111,7 @@ function rep_pass_Blur(){
     console.log("Repeat-Password: OK ");
   }
 }
-// Password ******* Focus event
+// RepeatPassword ******* Focus event
 rePassInput.addEventListener("focus", rePassHidden);
 
 function rePassHidden(){
@@ -119,4 +119,34 @@ function rePassHidden(){
   errorMessage.style.visibility =  "hidden";
 }
 
+/******************************** AGE ********************************/
+var ageInput = document.querySelector('#age_input');
+// Age ******* validation hidden at first
+var errorMessage = document.querySelector('#age_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+// Age ******* Blur event 
+ageInput.addEventListener("blur", ageBlur);
+
+function ageBlur(){
+  if ((!valAge(this.value) || (this.value <= 18)) && this.value != '') { 
+    var errorMessage = document.querySelector('#age_input').nextElementSibling;
+    errorMessage.style.visibility =  "visible" ;
+    errorMessage.style.color = "red";
+  }else {
+    console.log("Age: " + ageInput.value);
+  }
+}
+function valAge(str){
+  let re =/^[0-9]+$/;
+  if(re.test(str)){
+    return true;
+  }
+}
+// Age ******* Focus event
+ageInput.addEventListener("focus", ageHidden);
+
+function ageHidden(){
+  var errorMessage = document.querySelector('#age_input').nextElementSibling;
+  errorMessage.style.visibility =  "hidden";
+}
 }
